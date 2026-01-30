@@ -24,7 +24,7 @@ export default function Dashboard() {
     // RECOMENDACIÓN: Usa localStorage.getItem("user_token") directo dentro del fetch
     // para evitar problemas de sincronización de estado.
     const t = localStorage.getItem("user_token");
-    const response = await fetch('https://serverpy-uhm8.onrender.com/users', {
+    const response = await fetch('https://serverpy.vercel.app/users', {
         headers: { 'Authorization': t }
     });
     const data = await response.json();
@@ -39,7 +39,7 @@ export default function Dashboard() {
     // TAREA 1: Haz el fetch POST a 'http://localhost:5000/users'
     // Body debe llevar: { name: newName, email: newEmail }
     // Headers debe llevar: Content-Type y Authorization
-    const response = await fetch('https://serverpy-uhm8.onrender.com/users', {
+    const response = await fetch('https://serverpy.vercel.app/users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
